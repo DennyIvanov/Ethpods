@@ -81,14 +81,17 @@
     })
 
     // Parallax
-    window.addEventListener('scroll', () => {
-        let value = window.scrollY;
+    if (window.width > 768) {
 
-        // document.querySelector('#main').style.paddingBottom = `calc(168.75% + ${value * -0.3}px)`;
-        document.querySelector('#back').style.transform = `translateY(${value * -0.3}px)`;
-        document.querySelector('#front').style.transform = `translateY(${value * -0.5}px)`;
-        document.querySelector('#content').style.transform = `translateY(${value * -1}px)`;
-    })
+        window.addEventListener('scroll', () => {
+            let value = window.scrollY;
+
+            document.querySelector('#main').style.paddingBottom = `calc(168.75% + ${value * -0.3}px)`;
+            document.querySelector('#back').style.transform = `translateY(${value * -0.3}px)`;
+            document.querySelector('#front').style.transform = `translateY(${value * -0.5}px)`;
+            document.querySelector('#content').style.transform = `translateY(${value * -1}px)`;
+        })
+    }
 </script>
 </body>
 </html>

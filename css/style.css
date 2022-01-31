@@ -113,9 +113,9 @@ body {
 }
 
 .nav-link {
-    font-size: 1.6875rem;
+    font-size: 2.6875rem;
     display: block;
-    padding: 0.5rem 1rem;
+    padding:1rem;
 }
 
 /* Burger */
@@ -240,6 +240,11 @@ body {
 
     .nav-item:not(:last-child) {
         margin-right: 3rem;
+    }
+
+    .nav-link {
+        font-size: 1.6875rem;
+        padding: 0.5rem 1rem;
     }
 
     .navbar-social .nav-item {
