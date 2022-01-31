@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="images/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <title>Ethpods - Coming Soon</title>
 </head>
@@ -83,7 +84,7 @@
     window.addEventListener('scroll', () => {
         let value = window.scrollY;
 
-        document.querySelector('#main').style.paddingBottom = `calc(168.75% + ${value * -0.3}px)`;
+        // document.querySelector('#main').style.paddingBottom = `calc(168.75% + ${value * -0.3}px)`;
         document.querySelector('#back').style.transform = `translateY(${value * -0.3}px)`;
         document.querySelector('#front').style.transform = `translateY(${value * -0.5}px)`;
         document.querySelector('#content').style.transform = `translateY(${value * -1}px)`;
