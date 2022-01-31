@@ -1,0 +1,261 @@
+/* Fonts */
+@font-face {
+  font-family: 'Futura-CondensedMedium';
+  src: url('../fonts/futura/Futura-CondensedMedium.ttf') format('truetype'),
+       url('../fonts/futura/Futura-CondensedMedium.woff') format('woff'),
+       url('../fonts/futura/Futura-CondensedMedium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'SofiaPro-Regular';
+    src: url('../fonts/sofiapro/SofiaPro-Regular.ttf') format('truetype'),
+        url('../fonts/sofiapro/SofiaPro-Regular.woff') format('woff'),
+        url('../fonts/sofiapro/SofiaPro-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Basic */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+html {
+    font-family: 'SofiaPro-Regular';
+    font-size: 8px;
+    color: #dcb973;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #000;
+}
+
+/* Components */
+.container {
+    width: 100%;
+    max-width: 1880px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.h1,
+.h2 {
+    line-height: 1;
+}
+
+.h1 {
+    font-size: 4.1rem;
+}
+
+.h2 {
+    font-size: 2.625rem;
+}
+
+/* Navbar */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: center / cover no-repeat url('../images/header-bg.jpg');
+}
+
+.navbar {
+    justify-content: space-between;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+}
+
+.navbar-brand {
+    padding-top: 0.375rem;
+    padding-bottom: 0.125rem;
+    margin-right: 3.375rem;
+}
+
+.navbar-collapse {
+    display: none;
+}
+
+.navbar-nav {
+    flex-direction: column;
+}
+
+.nav-link {
+    font-size: 1.6875rem;
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+/* Burger */
+.navbar-toggler {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    padding: 0.5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar-toggler-icon {
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #00c4ba;
+    transition: .2s;
+}
+
+.navbar-toggler-icon + .navbar-toggler-icon {
+    margin-top: 0.8rem;
+}
+
+/* Navbar open */
+.navbar-open {
+    overflow: hidden;
+}
+
+.navbar-open .navbar-collapse {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.87);
+}
+
+.navbar-open .navbar-toggler-icon {
+    margin: 0;
+}
+
+.navbar-open .navbar-toggler-icon:nth-child(1) {
+    transform: translateY(100%) rotate(-45deg);
+}
+
+.navbar-open .navbar-toggler-icon:nth-child(2) {
+    opacity: 0;
+    width: 0;
+}
+
+.navbar-open .navbar-toggler-icon:nth-child(3) {
+    transform: translateY(-100%) rotate(45deg);
+}
+
+/* Content */
+.main {
+    position: relative;
+    padding-bottom: 168.75%;
+    overflow: hidden;
+}
+
+.main-content {
+    position: relative;
+    z-index: 3;
+    padding-top: 77%;
+    font-family: 'Futura-CondensedMedium';
+}
+
+.content-image {
+    width: 100%;
+    max-width: 23%;
+    margin-bottom: 7%;
+}
+
+.scene {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.scene-background {
+    object-fit: cover;
+}
+
+.scene-back {
+    z-index: 1;
+}
+
+.scene-front {
+    z-index: 2;
+}
+
+/* Media */
+@media (min-width: 768px) {
+    .navbar-nav {
+        flex-direction: row;
+    }
+
+    .navbar-collapse {
+        display: flex;
+    }
+
+    .navbar-collapse,
+    .navbar-nav {
+        flex-grow: 1;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .nav-item:not(:last-child) {
+        margin-right: 3rem;
+    }
+
+    .navbar-social .nav-item {
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 1366px) {
+    html {
+        font-size: 16px;
+    }
+}

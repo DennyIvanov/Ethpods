@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Ethpods - Coming Soon</title>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <nav class="navbar d-flex">
+            <a class="navbar-brand logo" href="/" title="Ethpods - Homepage">
+                <img src="images/logo.png" alt="Ethpods logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse">
+                <ul class="navbar-nav d-flex" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                    <li class="nav-item" itemprop="name">
+                        <a class="nav-link" href="/" itemprop="url">About</a>
+                    </li>
+                    <li class="nav-item" itemprop="name">
+                        <a class="nav-link" href="/" itemprop="url">Gallery</a>
+                    </li>
+                    <li class="nav-item" itemprop="name">
+                        <a class="nav-link" href="/" itemprop="url">Roadmap</a>
+                    </li>
+                    <li class="nav-item" itemprop="name">
+                        <a class="nav-link" href="/" itemprop="url">Tokenomics</a>
+                    </li>
+                    <li class="nav-item" itemprop="name">
+                        <a class="nav-link" href="/" itemprop="url">Team</a>
+                    </li>
+                    <li class="nav-item" itemprop="name">
+                        <a class="nav-link" href="/" itemprop="url">Blog</a>
+                    </li>
+                </ul>
+                <ul class="navbar-social d-flex justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/" target="_blank" title="Discord link">
+                            <img src="images/icons/discord.png" alt="Discord logo">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/" target="_blank" title="Twitter link">
+                            <img src="images/icons/twitter.png" alt="Twitter logo">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main class="main" id="main">
+    <img class="scene scene-background" src="images/background.jpg" alt="background">
+    <img id="back" class="scene scene-back" src="images/back.png" alt="back">
+    <img id="front" class="scene scene-front" src="images/front.png" alt="front">
+
+    <section id="content" class="main-content scene text-center">
+        <div class="container">
+            <img class="content-image" src="images/content.png" alt="Ethpods logo">
+            <p class="h2">configurable NFT ecosystem</p>
+            <h1 class="h1">coming soon</h1>
+        </div>
+    </section>
+</main>
+
+<script>
+    // Mobile Menu
+    document.querySelector('.navbar-toggler').addEventListener('click', () => {
+        document.body.classList.toggle('navbar-open');
+    })
+
+    // Parallax
+    window.addEventListener('scroll', () => {
+        let value = window.scrollY;
+
+        document.querySelector('#main').style.paddingBottom = `calc(168.75% + ${value * -0.3}px)`;
+        document.querySelector('#back').style.transform = `translateY(${value * -0.3}px)`;
+        document.querySelector('#front').style.transform = `translateY(${value * -0.5}px)`;
+        document.querySelector('#content').style.transform = `translateY(${value * -1}px)`;
+    })
+</script>
+</body>
+</html>
