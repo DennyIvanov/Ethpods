@@ -63,9 +63,13 @@
     <img id="front" class="scene scene-front" src="images/front.png" alt="front">
     <section id="content" class="main-content scene text-center">
         <div class="container">
-            <img class="content-image" src="images/content.png" alt="Ethpods logo">
-            <p class="h2">configurable NFT ecosystem</p>
-            <h1 class="h1">coming soon</h1>
+            <div class="content">
+                <a class="content-link" href="/">
+                    <img class="content-image" src="images/content.png" alt="Ethpods logo">
+                </a>
+                <p class="h2">configurable NFT ecosystem</p>
+                <h1 class="h1">coming soon</h1>
+            </div>
         </div>
     </section>
 </main>
@@ -76,10 +80,18 @@
         document.body.classList.toggle('navbar-open');
     })
 
+
+    // Scroll position 50% onload
+    history.scrollRestoration = 'manual';
+    window.scrollTo(0, document.body.clientHeight / 4)
+
+
     // Parallax
     if (window.screen.width >= 768) {
         window.addEventListener('scroll', () => {
             let value = window.scrollY;
+
+            // console.log(value);
 
             document.querySelector('#main').style.paddingBottom = `calc(168.75% + ${value * -0.3}px)`;
             document.querySelector('#back').style.transform = `translateY(${value * -0.3}px)`;
